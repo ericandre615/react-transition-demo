@@ -17,9 +17,9 @@ const Modal = React.createClass({
         className="modal-overlay"
         transitionName="overlay"
         transitionAppear={ true }
-        transitionAppearTimeout={ 500 }
-        transitionEnterTimeout={ 500 }
-        transitionLeaveTimeout={ 500 }
+        transitionAppearTimeout={ 1200 }
+        transitionEnter={ false }
+        transitionLeave={ false }
       />
         <Transition 
           component="div"
@@ -27,7 +27,7 @@ const Modal = React.createClass({
           transitionName="modal"
           transitionAppear={ true }
           transitionAppearTimeout={ 500 }
-          transitionEnterTimeout={ 500 }
+          transitionEnter={ 500 }
           transitionLeaveTimeout={ 500 }
         >
           <div className="modal-body">

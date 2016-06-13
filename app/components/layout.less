@@ -13,6 +13,17 @@ body {
   background: orange;
 }
 
+[role="menu-item"], [role="menu-item"] button {
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  display: inline-block;
+  padding: 1em;
+  margin: .5em;
+  background-color: #636379;
+
+}
+
 .list {
   padding: .5em;
   margin: 0 auto;
@@ -93,8 +104,8 @@ list-item-enter.list-item-enter-active {
   width: 100%;
   left: 0;
   top: 0;
-  opacity: 0.75;
-  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0.80;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-body {
@@ -113,14 +124,14 @@ list-item-enter.list-item-enter-active {
 }
 
 .overlay-appear.overlay-appear-active {
-  opacity: 0.75;
-  transition: all 500ms ease;
+  opacity: 0.80;
+  transition: all 1200ms ease-in;
 }
 
 .modal-appear {
   position: fixed;
   top: -50%;
-  left: 50%;
+  left: -50%;
   transform: translate(-50%, 0);
 }
 
@@ -128,5 +139,5 @@ list-item-enter.list-item-enter-active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 500ms ease-in;
+  transition: transform 500ms linear;
 }
