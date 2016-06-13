@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com:ericandre615/es6starter.git"
+    "url": "http://github.com/ericandre615/react-transition-demo.git"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
