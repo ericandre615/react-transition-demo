@@ -1,11 +1,22 @@
 import React from 'react';
 import Transition from 'react/lib/ReactCSSTransitionGroup';
 import { Link } from 'react-router';
-import { connect } from 'react-redux';
-
+import Modal from './modal/modal.jsx';
 import './layout.less';
 
 const Layout = React.createClass({
+  getInitialState() {
+    return {
+      showModal: false
+    }
+  },
+
+  handleClick() {
+    this.setState({
+      showModal: !this.props.showModal
+    });
+  },
+
   render() {
     return (
       <div id="layout">
@@ -13,6 +24,7 @@ const Layout = React.createClass({
         <ul role="menu">
           <li role="menu-item"><Link to="/public">Home</Link></li>
           <li role="menu-item"><Link to="/about">About</Link></li>
+          <li role="menu-item"><button onClick={ this.handleClick }>Modal</button></li>
         </ul>
       </nav>
         <Transition
@@ -27,6 +39,7 @@ const Layout = React.createClass({
             })
           }
         </Transition>
+        { (this.state.showModal) ? <Modal handleClick={ this.handleClick } /> : null }
       </div>
     );
   }

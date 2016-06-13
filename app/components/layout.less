@@ -9,6 +9,10 @@ body {
   background-color: #eaeaea;
 }
 
+#about .list {
+  background: orange;
+}
+
 .list {
   padding: .5em;
   margin: 0 auto;
@@ -81,4 +85,48 @@ list-item-enter.list-item-enter-active {
   transform: translateX(100%);
   box-shadow: 0px 0px 8px 4px #8484AD;
   transition: transform 600ms ease-out, box-shadow 600ms ease-out, opacity 600ms ease-out;
+}
+
+.modal-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.75;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-body {
+  position: fixed;
+  width: 60%;
+  height: 60%;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-appear {
+  opacity: 0;
+}
+
+.overlay-appear.overlay-appear-active {
+  opacity: 0.75;
+  transition: all 500ms ease;
+}
+
+.modal-appear {
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.modal-appear.modal-appear-active {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 500ms ease-in;
 }
