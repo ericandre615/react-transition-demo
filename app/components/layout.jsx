@@ -22,7 +22,7 @@ const Layout = React.createClass({
       <div id="layout">
       <nav role="navigation">
         <ul role="menu">
-          <li role="menu-item"><Link to="/public">Home</Link></li>
+          <li role="menu-item"><Link to="/">Home</Link></li>
           <li role="menu-item"><Link to="/about">About</Link></li>
           <li role="menu-item"><button onClick={ this.handleClick }>Modal</button></li>
         </ul>

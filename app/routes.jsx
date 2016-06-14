@@ -6,7 +6,7 @@ import About from './components/about/about.jsx';
 import NoRoute from './components/noroute.jsx';
 
 export default (
-  <Route name="app" path="/public" component={ Layout }>
+  <Route name="app" path="/" component={ Layout }>
     <IndexRoute component={Home} key="home" />
     <Route path="/about" component={ About } key="about" />
     <Route path="*" component={ NoRoute } key="fourOFour" />

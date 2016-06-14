@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "server": "node index.js",
+    "start": "npm run build && npm run server",
+    "dev": "webpack-dev-server"
   },
   "author": "Eric Andre",
   "license": "MIT",
@@ -28,7 +31,8 @@
     "postcss-loader": "^0.8.2",
     "react-addons-css-transition-group": "^15.1.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "react": "^15.0.1",

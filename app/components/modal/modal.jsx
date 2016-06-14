@@ -27,7 +27,7 @@ const Modal = React.createClass({
           transitionName="modal"
           transitionAppear={ true }
           transitionAppearTimeout={ 500 }
-          transitionEnter={ 500 }
+          transitionEnterTimeout={ 500 }
           transitionLeaveTimeout={ 500 }
         >
           <div className="modal-body">
