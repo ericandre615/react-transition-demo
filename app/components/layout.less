@@ -108,7 +108,7 @@ list-item-enter.list-item-enter-active {
   left: 0;
   top: 0;
   opacity: 0.80;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, .9);
 }
 
 .modal-body {
@@ -123,18 +123,21 @@ list-item-enter.list-item-enter-active {
 }
 
 .overlay-appear {
-  opacity: 0;
+  opacity: 0.01;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .overlay-appear.overlay-appear-active {
   opacity: 0.80;
-  transition: all 1200ms ease-in;
+  background-color: rgba(0, 0, 0, .9);
+  transition: all 800ms linear;
 }
 
 .modal-appear {
   position: fixed;
   top: -50%;
   left: -50%;
+  box-shadow: 2px 0px 4px 2px grey;
   transform: translate(-50%, 0);
 }
 
@@ -142,5 +145,6 @@ list-item-enter.list-item-enter-active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 500ms linear;
+  box-shadow: 0px 0px 0px 0px grey;
+  transition: transform 300ms linear, box-shadow 300ms ease;
 }

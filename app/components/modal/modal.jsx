@@ -14,13 +14,14 @@ const Modal = React.createClass({
       <Transition 
         component="div"
         key="overlay"
-        className="modal-overlay"
         transitionName="overlay"
         transitionAppear={ true }
-        transitionAppearTimeout={ 1200 }
+        transitionAppearTimeout={ 800 }
         transitionEnter={ false }
         transitionLeave={ false }
-      />
+      >
+      <div className="modal-overlay"></div>
+      </Transition>
         <Transition 
           component="div"
           key="modal"
