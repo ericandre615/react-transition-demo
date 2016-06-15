@@ -1,5 +1,7 @@
 import React from 'react';
 import Transition from 'react/lib/ReactCSSTransitionGroup';
+import TransitionGroup from 'react/lib/ReactTransitionGroup';
+import MyTransition from './trans/trans.jsx';
 import { Link } from 'react-router';
 import Modal from './modal/modal.jsx';
 import './layout.less';
@@ -40,6 +42,9 @@ const Layout = React.createClass({
             })
           }
         </Transition>
+        <TransitionGroup>
+          <MyTransition />
+        </TransitionGroup>
         { (this.state.showModal) ? <Modal ref="modal-ref" handleClick={ this.handleClick } /> : null }
       </div>
     );
