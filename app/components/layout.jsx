@@ -12,8 +12,9 @@ const Layout = React.createClass({
   },
 
   handleClick() {
+    console.log('clicked ', this);
     this.setState({
-      showModal: !this.props.showModal
+      showModal: !this.state.showModal
     });
   },
 
@@ -39,7 +40,7 @@ const Layout = React.createClass({
             })
           }
         </Transition>
-        { (this.state.showModal) ? <Modal handleClick={ this.handleClick } /> : null }
+        { (this.state.showModal) ? <Modal ref="modal-ref" handleClick={ this.handleClick } /> : null }
       </div>
     );
   }
